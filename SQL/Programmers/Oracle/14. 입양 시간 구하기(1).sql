@@ -1,0 +1,8 @@
+SELECT TO_CHAR(DATETIME, 'HH24') AS HOUR, COUNT(*)
+FROM ANIMAL_OUTS
+WHERE TO_CHAR(DATETIME, 'HH24') BETWEEN 9 AND 19
+GROUP BY TO_CHAR(DATETIME, 'HH24')
+ORDER BY TO_CHAR(DATETIME, 'HH24')
+
+--출처: 프로그래머스 코딩 테스트 연습
+--https://school.programmers.co.kr/learn/challenges
